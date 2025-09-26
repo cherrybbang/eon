@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import carCasper from '../assets/car_casper.avif';
 import carIoniq from '../assets/car_ioniq.avif';
 import LightRays from './LightRays';
+import ev1 from '../assets/ev1.jpg'
 
 const images = [
   { src: carIoniq, alt: '아이오닉5자동차' },
@@ -55,6 +56,24 @@ const MainPage: React.FC = () => {
           전기차 보급률 증가에 따라 사용자들이 겪는 불편함은 정보의 분산에 있습니다.<br/>
           EON은 사용자들에게 전기차 구매, 관리, 운행에 필요한 정보를 한번에 제공하는 통합 플랫폼을 목표로 합니다.
         </p>
+        <img src={ev1} alt="서비스소개" />
+      </div>
+      <div className='detail'>
+        <div className='left'>
+          전기차 토탈 관리 플랫폼<br/>
+          <span>Electric + ON<br/>
+          EON</span>
+        </div>
+        <div className='right'>
+          <div>
+            <p>보조금 정책 조회</p>
+            <p>성남시 기준 정보 + 지자체 전기차 보조금 정보 제공</p>
+          </div>
+          <div>
+            <p>충전소 위치 조회</p>
+            <p>실시간 충전소 위치, 사용 가능 여부, 충전 타입, 요금</p>
+          </div>
+        </div>
       </div>
     </div>
     

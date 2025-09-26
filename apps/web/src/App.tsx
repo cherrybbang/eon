@@ -4,6 +4,7 @@ import MainPage from './components/MainPage'
 import SubPage from './components/SubPage'
 import Header from './components/Header'
 import SubPage2 from './components/SubPage2'
+import Footer from './components/Footer'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './styles/App.css'
@@ -52,6 +53,7 @@ function App() {
         <Route path="/subsidy" element={<SubPage2 />} />
         <Route path="/find" element={<SubPage />} />
       </Routes>
+      {<Footer />}
     </>
   )
 }
