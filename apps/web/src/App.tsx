@@ -8,6 +8,7 @@ import SubPage2 from './components/SubPage2'
 // import viteLogo from '/vite.svg'
 // import './styles/App.css'
 import './styles/reset.css'
+import LightRays from './components/LightRays'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,21 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+      </div> */}
+      {/* <div className='light-rays'>
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="rgb(255, 255, 255)"
+          raysSpeed={1}
+          lightSpread={0.5}
+          rayLength={3}
+          fadeDistance={1}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0}
+          distortion={0}
+          className="custom-rays"
+        />
       </div> */}
       {<Header />}
       <div className="card">

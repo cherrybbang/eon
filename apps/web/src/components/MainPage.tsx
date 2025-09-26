@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import carCasper from '../assets/car_casper.avif';
 import carIoniq from '../assets/car_ioniq.avif';
+import LightRays from './LightRays';
 
 const images = [
   { src: carIoniq, alt: '아이오닉5자동차' },
@@ -20,19 +21,40 @@ const MainPage: React.FC = () => {
 
   return (
     <div className='main-page'>
-      <h1>메인페이지</h1>
-      <p>여기는 메인페이지입니다.</p>
+      <div className='light-rays'>
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="rgb(255, 255, 255)"
+          raysSpeed={1}
+          lightSpread={0.5}
+          rayLength={3}
+          fadeDistance={1}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0}
+          distortion={0}
+          className="custom-rays"
+        />
+      </div>
+      <div className='intro'>
+        <p>전기차 라이프의 시작과 끝을 한번에</p>
+        <p>웹 하나로 시작되는 EON 라이프</p>
+      </div>
       <div className='carousel'>
         <button className='prev-button' onClick={prevImage}>{'<'}</button>
         <img
           src={images[current].src}
           alt={images[current].alt}
-          style={{ width: '100%', display: 'block' }}
         />
         <button className='next-button' onClick={nextImage}>{'>'}</button>
       </div>
-      <div>
-        
+      <div className='about'>
+        <p>About EON</p>
+        <p>
+          우리는 전기차 사용자들에게 지침서가 되고 싶습니다.<br/>
+          전기차 보급률 증가에 따라 사용자들이 겪는 불편함은 정보의 분산에 있습니다.<br/>
+          EON은 사용자들에게 전기차 구매, 관리, 운행에 필요한 정보를 한번에 제공하는 통합 플랫폼을 목표로 합니다.
+        </p>
       </div>
     </div>
     

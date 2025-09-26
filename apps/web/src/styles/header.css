@@ -1,25 +1,22 @@
 .header {
+  position: fixed;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   max-width: 1920px;
-  height: 50px;
+  height: 70px;
   display: flex;
   gap: 20px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 0 30px;
-  color: #fff;
-  background-color: #000;
-  /* border: 1px solid red; */
+  color: #d1d2d4;
+  background-color: transparent;
+  z-index: 10;
+  border-bottom: 1px solid #3d3844;
 }
 .header > div a {
-  /* border: 1px solid red; */
-  line-height: 45px;
-  color: #fff;
+  line-height: 65px;
+  color: #d1d2d4;
+  font-weight: bold;
   margin: 0 20px;
 }
-/* .logo a {
-  color: #fff;
-}
-nav a {
-  line-height: 45px;
-  color: #fff;
-  margin: 0 20px;
-} */

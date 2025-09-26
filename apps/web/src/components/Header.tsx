@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/header.css'
+import LightRays from './LightRays'
 
 const Header: React.FC = () => {
   return (
