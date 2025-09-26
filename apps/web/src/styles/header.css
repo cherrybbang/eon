@@ -1,0 +1,25 @@
+.header {
+  max-width: 1920px;
+  height: 50px;
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 0 30px;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid red;
+}
+.header > div a {
+  /* border: 1px solid red; */
+  line-height: 45px;
+  color: #fff;
+  margin: 0 20px;
+}
+/* .logo a {
+  color: #fff;
+}
+nav a {
+  line-height: 45px;
+  color: #fff;
+  margin: 0 20px;
+} */

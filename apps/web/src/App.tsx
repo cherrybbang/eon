@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
-import MainPage from './MainPage'
-import SubPage from './SubPage'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import MainPage from './components/MainPage'
+import SubPage from './components/SubPage'
+import Header from './components/Header'
+import SubPage2 from './components/SubPage2'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+// import './styles/App.css'
+import './styles/reset.css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +22,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div> */}
-      <h1>Eon</h1>
+      {<Header />}
       <div className="card">
         {/* <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -28,11 +31,9 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p> */}
       </div>
-      <nav style={{ marginBottom: 20 }}>
-        <Link to="/">메인페이지</Link> | <Link to="/find">서브페이지</Link>
-      </nav>
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/subsidy" element={<SubPage2 />} />
         <Route path="/find" element={<SubPage />} />
       </Routes>
     </>
