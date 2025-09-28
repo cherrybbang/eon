@@ -2,12 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/header.css'
 import LightRays from './LightRays'
+import eon from '../assets/eon.png'
 
 const Header: React.FC = () => {
   return (
     <div className='header'>
       <div className='logo'>
-        <Link to="/">EON</Link>
+        <Link to="/">
+        EON
+        {/* <img src={eon} alt="EON Logo" /> */}
+        </Link>
       </div>
       <div>
         <nav>
