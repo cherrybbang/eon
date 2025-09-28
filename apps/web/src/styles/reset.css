@@ -26,6 +26,9 @@ a {
   z-index: 1;
 }
 .sub-page, .sub-page2 {
+  margin-top: 70px;
+}
+.sub-page, .sub-page2 {
   /* position: absolute;
   top: 70px; left: 50%;
   transform: translateX(-50%);
