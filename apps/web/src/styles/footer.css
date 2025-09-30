@@ -8,6 +8,7 @@
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 150px;
+  font-weight: 500;
   border-top: 1px solid #3d3844;
   /* z-index: 10; */
   /* border: 1px solid red; */
@@ -19,7 +20,11 @@
   display: flex;
   gap: 30px;
 }
+.footer > div:last-child {
+  width: 200px; height: 100%;
+  overflow: hidden;
+}
 .footer img {
-  width: 90px;
+  width: 200px;
   height: auto;
 }

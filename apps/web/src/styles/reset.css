@@ -7,8 +7,8 @@ body, #root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #d1d2d4;
-  background-color: #060010;
+  color: #000;
+  background-color: #d5dbe0;
 }
 a {
   text-decoration: none;
@@ -46,15 +46,30 @@ a {
   background-color: transparent;
 }
 .intro > p {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 4rem;
+  font-weight: bold;
+  /* margin-bottom: 10px; */
   background-color: transparent;
+}
+.explore {
+  margin-top: 50px;
+  text-align: center;
+}
+.explore > a {
+  display: inline-block;
+  width: 110px; height: 45px;
+  line-height: 45px;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .carousel {
   position: relative;
   height: 500px;
-  margin: 50px auto;
+  margin: 30px auto;
   background-color: transparent;
   /* border: 1px solid red; */
 }

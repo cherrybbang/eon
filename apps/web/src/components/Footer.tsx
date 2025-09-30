@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/footer.css'
-import eon from '../assets/eon.png'
+import eon from '../assets/eon-logo.png'
 
 const Footer: React.FC = () => {
   return (

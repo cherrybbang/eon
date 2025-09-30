@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import carCasper from '../assets/car_casper.avif';
 import carIoniq from '../assets/car_ioniq.avif';
+import carTucson from '../assets/car_tucson.avif';
+import carSantafe from '../assets/car_santafe.avif';
 import LightRays from './LightRays';
 import ev1 from '../assets/ev1.jpg'
+import { Link } from 'react-router-dom'
 
 const images = [
   { src: carIoniq, alt: '아이오닉5자동차' },
-  { src: carCasper, alt: '케스퍼자동차' }
+  { src: carCasper, alt: '케스퍼자동차' },
+  { src: carTucson, alt: '투싼자동차' },
+  // { src: carSantafe, alt: '싼타페자동차' },
 ];
 
 const MainPage: React.FC = () => {
@@ -20,9 +25,18 @@ const MainPage: React.FC = () => {
     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  // 자동 슬라이드 기능
+  useEffect(() => {
+    const autoSlide = setInterval(() => {
+      nextImage();
+    }, 5000);
+
+    return () => clearInterval(autoSlide); // 컴포넌트 언마운트 시 정리
+  }, [current]); // current가 변경될 때마다 interval 재설정
+
   return (
     <div className='main-page'>
-      <div className='light-rays'>
+      {/* <div className='light-rays'>
         <LightRays
           raysOrigin="top-center"
           raysColor="rgb(255, 255, 255)"
@@ -36,10 +50,15 @@ const MainPage: React.FC = () => {
           distortion={0}
           className="custom-rays"
         />
-      </div>
+      </div> */}
       <div className='intro'>
-        <p>전기차 라이프의 시작과 끝을 한번에</p>
-        <p>웹 하나로 시작되는 EON 라이프</p>
+        {/* <p>전기차 라이프의 시작과 끝을 한번에</p> */}
+        {/* <p>웹 하나로 시작되는 EON 라이프</p> */}
+        <p>Electric On Mobility</p>
+      </div>
+      <div className='explore'>
+        <Link to="/find">EON 체험하기</Link>
+        {/* <button type='button'>EON 체험하기</button> */}
       </div>
       <div className='carousel'>
         <button className='prev-button' onClick={prevImage}>{'<'}</button>
