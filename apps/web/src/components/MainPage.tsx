@@ -52,12 +52,14 @@ const MainPage: React.FC = () => {
         />
       </div> */}
       <div className='intro'>
-        {/* <p>전기차 라이프의 시작과 끝을 한번에</p> */}
+        <p>전기차 라이프 EON 하나로</p>
+        <p>시작과 끝, 모든 순간</p>
+        {/* <p>전기차 라이프의<br />시작과 끝을 한번에</p> */}
         {/* <p>웹 하나로 시작되는 EON 라이프</p> */}
-        <p>Electric On Mobility</p>
+        {/* <p>Electric On Mobility</p> */}
       </div>
       <div className='explore'>
-        <Link to="/find">EON 체험하기</Link>
+        {/* <Link to="/find">EON 체험하기</Link> */}
         {/* <button type='button'>EON 체험하기</button> */}
       </div>
       <div className='carousel'>
