@@ -11,16 +11,16 @@ export interface Manufacturer {
 
 export const manufacturers: Manufacturer[] = [
   {
-    id: '1',
+    id: '현대자동차',
     name: '현대자동차',
     models: [
-      { id: 'gv60', name: 'GV 60' },
-      { id: 'gv70', name: 'GV 70' },
+      { id: 'gv60', name: 'GV60' },
+      { id: 'gv70', name: 'GV70' },
       { id: 'ioniq5', name: '아이오닉 5' }
     ]
   },
   {
-    id: '2',
+    id: '기아',
     name: '기아',
     models: [
       { id: 'ev6', name: 'EV6' },
@@ -29,7 +29,7 @@ export const manufacturers: Manufacturer[] = [
     ]
   },
   {
-    id: '3',
+    id: '르노',
     name: '르노',
     models: [
       { id: 'sm6', name: 'SM6' },
@@ -37,7 +37,7 @@ export const manufacturers: Manufacturer[] = [
     ]
   },
   {
-    id: '4',
+    id: 'BMW',
     name: 'BMW',
     models: [
       { id: 'x3', name: 'X3' },
@@ -46,7 +46,7 @@ export const manufacturers: Manufacturer[] = [
     ]
   },
   {
-    id: '5',
+    id: '테슬라',
     name: '테슬라',
     models: [
       { id: 'model3', name: 'Model 3' },
@@ -55,7 +55,7 @@ export const manufacturers: Manufacturer[] = [
     ]
   },
   {
-    id: '6',
+    id: '메르세데스벤츠',
     name: '메르세데스벤츠',
     models: [
       { id: 'eqc', name: 'EQC' },
