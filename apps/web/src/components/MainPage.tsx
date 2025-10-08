@@ -29,7 +29,7 @@ const MainPage: React.FC = () => {
   useEffect(() => {
     const autoSlide = setInterval(() => {
       nextImage();
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(autoSlide); // 컴포넌트 언마운트 시 정리
   }, [current]); // current가 변경될 때마다 interval 재설정
