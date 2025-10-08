@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { getModelsByManufacturer } from '../types/carModel';
+import '../styles/sub2.css';
+import carImage from '../assets/car_ioniq.avif';
 
 const SubPage2: React.FC = () => {
   const [selectedManufacturer, setSelectedManufacturer] = useState('');
@@ -17,7 +19,7 @@ const SubPage2: React.FC = () => {
 
   const handleSearch = async () => {
     if (!selectedManufacturer || !selectedModel) {
-      alert('제조사와 모델을 모두 선택해주세요.');
+      alert('제조사와 모델 모두 선택해주세요.');
       return;
     }
 
@@ -44,17 +46,22 @@ const SubPage2: React.FC = () => {
     <div className='sub-page2'>
       <div className='request-box'>
         <div>
-          <select>
+          <p>내 차 보조금 조회하기</p>
+          <select className='sido-select'>
             <option value="" disabled selected>시/도 선택</option>
             <option value="">경기도</option>
           </select>
 
-          <select>
+          <select className='sigungu-select'>
             <option value="" disabled selected>시/군/구 선택</option>
             <option value="">성남시</option>
           </select>
 
-          <select value={selectedManufacturer} onChange={handleManufacturerChange}>
+          <select 
+            className='manufacturer-select'
+            value={selectedManufacturer}
+            onChange={handleManufacturerChange}
+          >
             <option value="" disabled selected>제조사 선택</option>
             <option value="현대자동차">현대자동차</option>
             <option value="기아">기아</option>
@@ -65,6 +72,7 @@ const SubPage2: React.FC = () => {
           </select>
 
           <select 
+            className='model-select'
             value={selectedModel}
             onChange={handleModelChange}
             disabled={!selectedManufacturer}
@@ -83,7 +91,12 @@ const SubPage2: React.FC = () => {
         </div>
       </div>
       <div className='result-box'>
-
+        <div>
+          <img src={carImage} alt='자동차모델이미지'></img>
+          <p>국비 <span>100</span></p>
+          <p>지방비 <span>50</span></p>
+          <p>보조금 총합 <span>150</span></p>
+        </div>
       </div>
     </div>
   );

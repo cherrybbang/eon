@@ -9,9 +9,10 @@
   justify-content: space-between;
   /* gap: 20px; */
   /* margin: 0 auto; */
-  padding: 0 30px;
+  padding: 0 100px;
   color: #000;
-  background-color: #d5dbe0;
+  /* background-color: #d5dbe0; */
+  background-color: #fff;
   z-index: 10;
   border-bottom: 1px solid #3d3844;
 }
@@ -22,6 +23,7 @@
   margin: 0 20px;
 }
 .logo {
+  height: 100%;
   overflow: hidden;
 }
 .logo > a {
@@ -33,4 +35,7 @@
   position: absolute;
   top: -25%; left: 0;
   width: 100%;
+}
+nav {
+  height: 100%;
 }

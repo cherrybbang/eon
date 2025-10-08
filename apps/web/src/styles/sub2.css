@@ -1,0 +1,62 @@
+.sub-page2 {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+.request-box {
+  /* max-width: 1920px; */
+  height: 300px;
+  margin: 0 auto;
+  background: url('../assets/subback.jpg') no-repeat center;
+  padding-top: 50px;
+  /* border: 1px solid red; */
+}
+.request-box > div {
+  padding: 0 170px;
+}
+.request-box p {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.request-box select {
+  border-radius: 7px;
+  height: 30px;
+  margin-right: 10px;
+  padding: 3px;
+  border: 1px solid #ccc;
+}
+.sido-select, .sigungu-select, .manufacturer-select {
+  width: 150px;
+}
+.model-select {
+  width: 200px;
+}
+.request-box button {
+  width: 90px; height: 30px;
+  border-radius: 7px;
+  color: #616161;
+  background-color: #fefafa;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.request-box button:hover {
+  color: #000;
+  /* transition: 0.3s; */
+}
+.result-box {
+  padding: 0 170px;
+}
+.result-box > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  margin-top: 50px;
+  padding: 30px 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.result-box img {
+  width: 500px;
+}

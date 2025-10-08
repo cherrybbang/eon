@@ -8,7 +8,7 @@ body, #root {
   padding: 0;
   box-sizing: border-box;
   color: #000;
-  background-color: #d5dbe0;
+  /* background-color: #d5dbe0; */
 }
 a {
   text-decoration: none;
@@ -21,9 +21,12 @@ a {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 50px;
-  background-color: transparent;
+  /* padding: 0 50px; */
+  /* background-color: transparent; */
   z-index: 1;
+}
+.main-page, .sub-page {
+  padding: 0 50px;
 }
 .sub-page, .sub-page2 {
   margin-top: 70px;
