@@ -16,6 +16,7 @@ const images = [
 
 const MainPage: React.FC = () => {
   const [current, setCurrent] = useState(0);
+  const [animateMainImg, setAnimateMainImg] = useState(false);
 
   const prevImage = () => {
     setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -34,6 +35,12 @@ const MainPage: React.FC = () => {
     return () => clearInterval(autoSlide); // 컴포넌트 언마운트 시 정리
   }, [current]); // current가 변경될 때마다 interval 재설정
 
+  // 마운트 시 메인 이미지 슬라이드 인 애니메이션 시작
+  useEffect(() => {
+    const t = setTimeout(() => setAnimateMainImg(true), 700);
+    return () => clearTimeout(t);
+  }, []);
+
   return (
     <div className='main-page'>
       {/* <div className='light-rays'>
@@ -51,16 +58,16 @@ const MainPage: React.FC = () => {
           className="custom-rays"
         />
       </div> */}
-      <div className='intro'>
+      {/* <div className='intro'>
         <p>전기차 라이프 EON 하나로</p>
         <p>시작과 끝, 모든 순간</p>
-        {/* <p>전기차 라이프의<br />시작과 끝을 한번에</p> */}
-        {/* <p>웹 하나로 시작되는 EON 라이프</p> */}
-        {/* <p>Electric On Mobility</p> */}
+        <p>전기차 라이프의<br />시작과 끝을 한번에</p>
+        <p>웹 하나로 시작되는 EON 라이프</p>
+        <p>Electric On Mobility</p>
       </div>
       <div className='explore'>
-        {/* <Link to="/find">EON 체험하기</Link> */}
-        {/* <button type='button'>EON 체험하기</button> */}
+        <Link to="/find">EON 체험하기</Link>
+        <button type='button'>EON 체험하기</button>
       </div>
       <div className='carousel'>
         <button className='prev-button' onClick={prevImage}>{'<'}</button>
@@ -69,6 +76,22 @@ const MainPage: React.FC = () => {
           alt={images[current].alt}
         />
         <button className='next-button' onClick={nextImage}>{'>'}</button>
+      </div> */}
+      <div className='main-visual'>
+        <div className='text-container'>
+          <h2>전기차 토탈 관리 플랫폼</h2>
+          <p>
+            Electric + On = EON<br/>
+            전기차 구입부터 관리, 운행까지<br/>
+            전 과정을 웹 하나로, 켜는 순간 시작되는 EON 라이프
+          </p>
+        </div>
+        <div className='img-container'>
+          <img 
+          src={carIoniq} 
+          alt='메인자동차이미지' 
+          className={`main-car-img ${animateMainImg ? 'slide-in' : ''}`}/>
+        </div>
       </div>
       <div className='about'>
         <p>About EON</p>
