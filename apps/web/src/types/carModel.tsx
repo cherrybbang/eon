@@ -1,3 +1,6 @@
+import defaultCarImage from '../assets/car_ioniq.avif'
+import default2CarImage from '../assets/car_casper.avif'
+
 export interface CarModel {
   id: string;
   name: string;
@@ -16,7 +19,7 @@ export const manufacturers: Manufacturer[] = [
     models: [
       { id: 'gv60', name: 'GV60' },
       { id: 'gv70', name: 'GV70' },
-      { id: 'ioniq5', name: '아이오닉 5' }
+      { id: 'ioniq6', name: '아이오닉6' },
     ]
   },
   {
@@ -68,4 +71,13 @@ export const manufacturers: Manufacturer[] = [
 export const getModelsByManufacturer = (manufacturerId: string): CarModel[] => {
   const manufacturer = manufacturers.find(m => m.id === manufacturerId);
   return manufacturer ? manufacturer.models : [];
+};
+
+export const modelImageMap: Record<string, string> = {
+  gv60: defaultCarImage,
+  gv70: default2CarImage,
+};
+
+export const getImageByModel = (modelId: string): string => {
+  return modelImageMap[modelId] ?? defaultCarImage;
 };
