@@ -25,7 +25,7 @@ const SubPage2: React.FC = () => {
       return;
     }
 
-    setCarImageSrc(getImageByModel(selectedModel));
+    // setCarImageSrc(getImageByModel(selectedModel));
 
     // try {
     //   const params = new URLSearchParams({

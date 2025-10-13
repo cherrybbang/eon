@@ -30,7 +30,7 @@ const MainPage: React.FC = () => {
   useEffect(() => {
     const autoSlide = setInterval(() => {
       nextImage();
-    }, 3000);
+    }, 3500);
 
     return () => clearInterval(autoSlide); // 컴포넌트 언마운트 시 정리
   }, [current]); // current가 변경될 때마다 interval 재설정
@@ -58,17 +58,17 @@ const MainPage: React.FC = () => {
           className="custom-rays"
         />
       </div> */}
-      {/* <div className='intro'>
-        <p>전기차 라이프 EON 하나로</p>
+      <div className='intro'>
+        {/* <p>전기차 라이프 EON 하나로</p>
         <p>시작과 끝, 모든 순간</p>
-        <p>전기차 라이프의<br />시작과 끝을 한번에</p>
-        <p>웹 하나로 시작되는 EON 라이프</p>
+        <p>전기차 라이프의<br />시작과 끝을 한번에</p> */}
         <p>Electric On Mobility</p>
+        {/* <p>웹 하나로 시작되는 EON 라이프</p> */}
       </div>
-      <div className='explore'>
+      {/* <div className='explore'>
         <Link to="/find">EON 체험하기</Link>
         <button type='button'>EON 체험하기</button>
-      </div>
+      </div> */}
       <div className='carousel'>
         <button className='prev-button' onClick={prevImage}>{'<'}</button>
         <img
@@ -76,8 +76,8 @@ const MainPage: React.FC = () => {
           alt={images[current].alt}
         />
         <button className='next-button' onClick={nextImage}>{'>'}</button>
-      </div> */}
-      <div className='main-visual'>
+      </div>
+      {/* <div className='main-visual'>
         <div className='text-container'>
           <h2>전기차 토탈 관리 플랫폼</h2>
           <p>
@@ -92,7 +92,7 @@ const MainPage: React.FC = () => {
           alt='메인자동차이미지' 
           className={`main-car-img ${animateMainImg ? 'slide-in' : ''}`}/>
         </div>
-      </div>
+      </div> */}
       <div className='about'>
         <p>About EON</p>
         <p>

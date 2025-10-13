@@ -109,7 +109,7 @@ a {
   }
 }
 .intro {
-  margin-top: 150px;
+  margin-top: 200px;
   text-align: center;
   background-color: transparent;
 }
@@ -137,7 +137,7 @@ a {
 .carousel {
   position: relative;
   height: 500px;
-  margin: 30px auto;
+  margin: 50px auto;
   background-color: transparent;
   /* border: 1px solid red; */
 }
@@ -152,10 +152,11 @@ a {
 .prev-button, .next-button {
   position: absolute;
   top: 40%;
-  color: #fff;
+  color: #000;
   font-size: 1.5rem;
   border: none;
   padding: 10px;
+  background-color: #fff;
   cursor: pointer;
 }
 .prev-button {
