@@ -27,23 +27,31 @@ const SubPage2: React.FC = () => {
 
     // setCarImageSrc(getImageByModel(selectedModel));
 
-    // try {
-    //   const params = new URLSearchParams({
-    //     manufacturer: selectedManufacturer,
-    //     model_group: selectedModel
-    //   });
+    try {
+      const manufacturer = encodeURIComponent(selectedManufacturer)
+      const model_group = encodeURIComponent(selectedModel)
 
-    //   const response = await fetch(`http://localhost:8000/api/v1/subsidies/search/?${params}`);
+      const apiKey = import.meta.env.VITE_API_KEY;
 
-    //   const data = await response.json();
-    //   console.log('검색 결과:', data);
+      const response = await fetch(`https://backend-server-4na0.onrender.com/subsidy?manufacturer=${manufacturer}&model_group=${model_group}`,
+        {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+            'X-API-KEY': apiKey
+          }
+        }
+      );
 
-    //   // 선택 모델에 해당하는 이미지로 변경
-    //   // setCarImageSrc(getImageByModel(selectedModel));
+      const data = await response.json();
+      console.log('검색 결과:', data, { manufacturer, model_group });
+
+      // 선택 모델에 해당하는 이미지로 변경
+      setCarImageSrc(getImageByModel(selectedModel));
       
-    // } catch (error) {
-    //   console.error('검색 오류:', error);
-    // }
+    } catch (error) {
+      console.error('검색 오류:', error);
+    }
   };
 
   // 모델명 가져오기

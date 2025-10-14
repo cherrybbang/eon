@@ -17,8 +17,8 @@ export const manufacturers: Manufacturer[] = [
     id: '현대자동차',
     name: '현대자동차',
     models: [
-      { id: 'gv60', name: 'GV60' },
-      { id: 'gv70', name: 'GV70' },
+      { id: 'GV60', name: 'GV60' },
+      { id: 'GV70', name: 'GV70' },
       { id: 'ioniq6', name: '아이오닉6' },
     ]
   },
