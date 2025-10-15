@@ -28,3 +28,9 @@ export async function apiFetch<T> (
   return response.json() as Promise<T>;
 }
 
+// extends RequestInit → fetch() 함수의 기본 옵션(RequestInit)을 상속
+// RequestInit에는 method, body, mode, credentials 등 fetch에서 사용 가능한 옵션이 이미 정의되어 있음
+
+// Record<string, string> → 키/값이 모두 문자열이라는 뜻
+// 예: { 'Content-Type': 'application/json', 'X-API-KEY': 'abc' }
+// 즉, headers의 key와 value 모두 string이어야 함

@@ -3,6 +3,7 @@ import { getModelsByManufacturer, getImageByModel } from '../types/carModel';
 import '../styles/sub2.css';
 import carImage from '../assets/car_ioniq.avif';
 import { fetchSubsidy } from '../api/subsidy';
+import { apiFetch } from '../api/client';
 
 const SubPage2: React.FC = () => {
   const [selectedManufacturer, setSelectedManufacturer] = useState('');
@@ -27,24 +28,6 @@ const SubPage2: React.FC = () => {
     }
 
     try {
-      // const manufacturer = encodeURIComponent(selectedManufacturer)
-      // const model_group = encodeURIComponent(selectedModel)
-
-      // const apiKey = import.meta.env.VITE_API_KEY;
-
-      // const response = await fetch(`https://backend-server-4na0.onrender.com/subsidy?manufacturer=${manufacturer}&model_group=${model_group}`,
-      //   {
-      //     method: 'GET',
-      //     headers: {
-      //       'Accept': 'application/json',
-      //       'X-API-KEY': apiKey
-      //     }
-      //   }
-      // );
-
-      // const data = await response.json();
-      // console.log('검색 결과:', data, { manufacturer, model_group });
-
       const data = await fetchSubsidy(selectedManufacturer, selectedModel);
       console.log('검색 결과:', data);
       
