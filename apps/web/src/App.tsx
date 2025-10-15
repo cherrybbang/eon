@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+// import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import MainPage from './components/MainPage'
 import SubPage from './components/SubPage'
 import Header from './components/Header'
