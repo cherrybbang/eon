@@ -9,6 +9,8 @@ const SubPage2: React.FC = () => {
   const [selectedModel, setSelectedModel] = useState('');
   const [carImageSrc, setCarImageSrc] = useState(carImage);
 
+  const [subsidyResults, setSubsidyResults] = useState<any[]>([]);
+
   const handleManufacturerChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const manufacturerId = e.target.value;
     setSelectedManufacturer(manufacturerId);
@@ -30,6 +32,7 @@ const SubPage2: React.FC = () => {
       const data = await fetchSubsidy(selectedManufacturer, selectedModel);
       console.log('검색 결과:', data);
       
+      setSubsidyResults(Array.isArray(data) ? data : [data]);
       // 선택 모델에 해당하는 이미지로 변경
       setCarImageSrc(getImageByModel(selectedModel));
       
@@ -96,12 +99,23 @@ const SubPage2: React.FC = () => {
         </div>
       </div>
       <div className='result-box'>
-        <div>
-          <img src={carImageSrc} alt='자동차모델이미지'></img>
-          <p>국비 <span>100</span></p>
-          <p>지방비 <span>50</span></p>
-          <p>보조금 총합 <span>150</span></p>
-        </div>
+       {subsidyResults.length === 0 ? (
+          <div>
+            <p>검색 결과가 없습니다.</p>
+          </div>
+        ) : (
+          subsidyResults.map((result, index) => (
+            <div key={`res-${index}`} className='result-item'>
+              <div>
+                <img src={carImageSrc} alt='자동차모델이미지' />
+                <h4>{result.model_name}</h4>
+                <p>국비: <span>{result.subsidy_national}</span> 만원</p>
+                <p>지방비: <span>{result.subsidy_local}</span> 만원</p>
+                <p>총합: <span>{result.subsidy_total}</span> 만원</p>
+              </div>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
