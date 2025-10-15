@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { getModelsByManufacturer, getImageByModel } from '../types/carModel';
 import '../styles/sub2.css';
 import carImage from '../assets/car_ioniq.avif';
+import { fetchSubsidy } from '../api/subsidy';
 
 const SubPage2: React.FC = () => {
   const [selectedManufacturer, setSelectedManufacturer] = useState('');
@@ -25,27 +26,28 @@ const SubPage2: React.FC = () => {
       return;
     }
 
-    // setCarImageSrc(getImageByModel(selectedModel));
-
     try {
-      const manufacturer = encodeURIComponent(selectedManufacturer)
-      const model_group = encodeURIComponent(selectedModel)
+      // const manufacturer = encodeURIComponent(selectedManufacturer)
+      // const model_group = encodeURIComponent(selectedModel)
 
-      const apiKey = import.meta.env.VITE_API_KEY;
+      // const apiKey = import.meta.env.VITE_API_KEY;
 
-      const response = await fetch(`https://backend-server-4na0.onrender.com/subsidy?manufacturer=${manufacturer}&model_group=${model_group}`,
-        {
-          method: 'GET',
-          headers: {
-            'Accept': 'application/json',
-            'X-API-KEY': apiKey
-          }
-        }
-      );
+      // const response = await fetch(`https://backend-server-4na0.onrender.com/subsidy?manufacturer=${manufacturer}&model_group=${model_group}`,
+      //   {
+      //     method: 'GET',
+      //     headers: {
+      //       'Accept': 'application/json',
+      //       'X-API-KEY': apiKey
+      //     }
+      //   }
+      // );
 
-      const data = await response.json();
-      console.log('검색 결과:', data, { manufacturer, model_group });
+      // const data = await response.json();
+      // console.log('검색 결과:', data, { manufacturer, model_group });
 
+      const data = await fetchSubsidy(selectedManufacturer, selectedModel);
+      console.log('검색 결과:', data);
+      
       // 선택 모델에 해당하는 이미지로 변경
       setCarImageSrc(getImageByModel(selectedModel));
       
