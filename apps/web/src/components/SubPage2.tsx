@@ -3,7 +3,6 @@ import { getModelsByManufacturer, getImageByModel } from '../types/carModel';
 import '../styles/sub2.css';
 import carImage from '../assets/car_ioniq.avif';
 import { fetchSubsidy } from '../api/subsidy';
-import { apiFetch } from '../api/client';
 
 const SubPage2: React.FC = () => {
   const [selectedManufacturer, setSelectedManufacturer] = useState('');
@@ -35,6 +34,7 @@ const SubPage2: React.FC = () => {
       setCarImageSrc(getImageByModel(selectedModel));
       
     } catch (error) {
+      alert('보조금 정보를 가져오는 중 오류가 발생했습니다.');
       console.error('검색 오류:', error);
     }
   };
@@ -63,12 +63,17 @@ const SubPage2: React.FC = () => {
             onChange={handleManufacturerChange}
           >
             <option value='' disabled>제조사 선택</option>
-            <option value='현대자동차'>현대자동차</option>
+            <option value='현대자동차'>현대</option>
             <option value='기아'>기아</option>
-            <option value='르노'>르노</option>
+            <option value='르노코리아'>르노</option>
             <option value='BMW'>BMW</option>
-            <option value='테슬라'>테슬라</option>
-            <option value='메르세데스벤츠'>메르세데스벤츠</option>
+            <option value='테슬라코리아'>테슬라</option>
+            <option value='메르세데스벤츠코리아'>메르세데스벤츠</option>
+            <option value='폭스바겐그룹코리아'>폭스바겐</option>
+            <option value='케이지모빌리티'>KGM</option>
+            <option value='폴스타오토모티브코리아'>폴스타</option>
+            <option value='볼보자동차코리아'>볼보</option>
+            <option value='비와이디코리아'>BYD</option>
           </select>
 
           <select 

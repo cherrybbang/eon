@@ -19,51 +19,98 @@ export const manufacturers: Manufacturer[] = [
     models: [
       { id: 'GV60', name: 'GV60' },
       { id: 'GV70', name: 'GV70' },
-      { id: 'ioniq6', name: '아이오닉6' },
+      { id: '아이오닉6', name: '아이오닉6' },
+      { id: '코나 EV', name: '코나 EV' },
+      { id: '아이오닉5', name: '아이오닉5' },
+      { id: 'G80', name: 'G80' },
+      { id: '아이오닉9', name: '아이오닉9' },
     ]
   },
   {
     id: '기아',
     name: '기아',
     models: [
-      { id: 'ev6', name: 'EV6' },
-      { id: 'niro', name: '니로' },
-      { id: 'carnival', name: '카니발' }
+      { id: 'Niro EV', name: 'Niro EV' },
+      { id: 'EV9', name: 'EV9' },
+      { id: 'EV6', name: 'EV6' },
+      { id: 'EV3', name: 'EV3' },
+      { id: 'EV4', name: 'EV4' },
+      { id: 'PV5', name: 'PV5' },
+      { id: 'EV5', name: 'EV5' }
     ]
   },
   {
-    id: '르노',
-    name: '르노',
+    id: '르노코리아',
+    name: '르노코리아',
     models: [
-      { id: 'sm6', name: 'SM6' },
-      { id: 'qm6', name: 'QM6' }
+      { id: 'scenic', name: 'scenic' }
     ]
   },
   {
     id: 'BMW',
     name: 'BMW',
     models: [
-      { id: 'x3', name: 'X3' },
-      { id: 'x5', name: 'X5' },
-      { id: 'i4', name: 'i4' }
+      { id: 'MINI', name: 'MINI' },
+      { id: 'i4', name: 'i4' },
+      { id: 'iX1', name: 'iX1' },
+      { id: 'iX2', name: 'iX2' },
+      { id: 'i5', name: 'i5' }
     ]
   },
   {
-    id: '테슬라',
-    name: '테슬라',
+    id: '테슬라코리아',
+    name: '테슬라코리아',
     models: [
-      { id: 'model3', name: 'Model 3' },
-      { id: 'modelY', name: 'Model Y' },
-      { id: 'modelS', name: 'Model S' }
+      { id: 'Model 3', name: 'Model 3' },
+      { id: 'Model Y', name: 'Model Y' },
     ]
   },
   {
-    id: '메르세데스벤츠',
-    name: '메르세데스벤츠',
+    id: '메르세데스벤츠코리아',
+    name: '메르세데스벤츠코리아',
     models: [
-      { id: 'eqc', name: 'EQC' },
-      { id: 'eqs', name: 'EQS' },
-      { id: 'convertible', name: '컨버터블' }
+      { id: 'EQB', name: 'EQB' },
+      { id: 'EQA', name: 'EQA' },
+    ]
+  },
+  {
+    id: '폭스바겐그룹코리아',
+    name: '폭스바겐그룹코리아',
+    models: [
+      { id: '아우디 Q4', name: '아우디 Q4' },
+      { id: '폭스바겐 ID.4', name: '폭스바겐 ID.4' },
+      { id: '폭스바겐 ID.5', name: '폭스바겐 ID.5' },
+      { id: '아우디 Q6', name: '아우디 Q6' }
+    ]
+  },
+  {
+    id: '케이지모빌리티',
+    name: '케이지모빌리티',
+    models: [
+      { id: '토레스 EVX', name: '토레스 EVX' },
+      { id: '코란도 EV', name: '코란도 EV' },
+    ]
+  },
+  {
+    id: '폴스타오토모티브코리아',
+    name: '폴스타오토모티브코리아',
+    models: [
+      { id: 'Polestar 4', name: 'Polestar 4' },
+    ]
+  },
+  {
+    id: '볼보자동차코리아',
+    name: '볼보자동차코리아',
+    models: [
+      { id: 'EX30', name: 'EX30' },
+    ]
+  },
+  {
+    id: '비와이디코리아',
+    name: '비와이디코리아',
+    models: [
+      { id: 'ATTO 3', name: 'ATTO 3' },
+      { id: 'SEAL', name: 'SEAL' }
     ]
   }
 ];
@@ -74,10 +121,11 @@ export const getModelsByManufacturer = (manufacturerId: string): CarModel[] => {
 };
 
 export const modelImageMap: Record<string, string> = {
-  gv60: defaultCarImage,
-  gv70: default2CarImage,
+  GV60: defaultCarImage,
+  GV70: default2CarImage,
 };
 
 export const getImageByModel = (modelId: string): string => {
   return modelImageMap[modelId] ?? defaultCarImage;
+
 };
