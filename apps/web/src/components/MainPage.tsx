@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import carCasper from '../assets/car_casper.avif';
 import carIoniq from '../assets/car_ioniq.avif';
 import carTucson from '../assets/car_tucson.avif';
-import carSantafe from '../assets/car_santafe.avif';
-import LightRays from './LightRays';
 import ev1 from '../assets/ev1.jpg'
-import { Link } from 'react-router-dom'
 
 const images = [
   { src: carIoniq, alt: '아이오닉5자동차' },
@@ -16,7 +13,7 @@ const images = [
 
 const MainPage: React.FC = () => {
   const [current, setCurrent] = useState(0);
-  const [animateMainImg, setAnimateMainImg] = useState(false);
+  // const [animateMainImg, setAnimateMainImg] = useState(false);
 
   const prevImage = () => {
     setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -36,10 +33,10 @@ const MainPage: React.FC = () => {
   }, [current]); // current가 변경될 때마다 interval 재설정
 
   // 마운트 시 메인 이미지 슬라이드 인 애니메이션 시작
-  useEffect(() => {
-    const t = setTimeout(() => setAnimateMainImg(true), 700);
-    return () => clearTimeout(t);
-  }, []);
+  // useEffect(() => {
+  //   const t = setTimeout(() => setAnimateMainImg(true), 700);
+  //   return () => clearTimeout(t);
+  // }, []);
 
   return (
     <div className='main-page'>

@@ -9,11 +9,8 @@ import Footer from './components/Footer'
 // import viteLogo from '/vite.svg'
 // import './styles/App.css'
 import './styles/reset.css'
-import LightRays from './components/LightRays'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       {/* <div>

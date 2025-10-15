@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/header.css'
-import LightRays from './LightRays'
 import eon from '../assets/eon-logo.png'
 
 const Header: React.FC = () => {
