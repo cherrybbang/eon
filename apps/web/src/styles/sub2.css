@@ -47,15 +47,26 @@
 .result-box {
   padding: 0 170px;
 }
-.result-box > div {
+.no-results {
+  padding-left: 20px;
+}
+.result-item > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1000px;
+  max-width: 1000px;
   margin-top: 50px;
   padding: 30px 60px 30px 0px;
   border: 1px solid #000;
   border-radius: 10px;
+}
+.result-text {
+  width: 40%;
+  /* border: 1px solid red; */
+}
+.result-text span {
+  font-weight: 600;
+  font-size: 1rem;
 }
 .result-box img {
   width: 500px;

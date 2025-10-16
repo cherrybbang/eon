@@ -101,17 +101,19 @@ const SubPage2: React.FC = () => {
       <div className='result-box'>
        {subsidyResults.length === 0 ? (
           <div>
-            <p>검색 결과가 없습니다.</p>
+            <p className='no-results'>검색 결과가 없습니다.</p>
           </div>
         ) : (
           subsidyResults.map((result, index) => (
             <div key={`res-${index}`} className='result-item'>
               <div>
                 <img src={carImageSrc} alt='자동차모델이미지' />
-                <h4>{result.model_name}</h4>
-                <p>국비: <span>{result.subsidy_national}</span> 만원</p>
-                <p>지방비: <span>{result.subsidy_local}</span> 만원</p>
-                <p>총합: <span>{result.subsidy_total}</span> 만원</p>
+                <div className='result-text'>
+                  <h4>{result.model_name}</h4>
+                  <p>국비: <span className='sub_national'>{result.subsidy_national}</span> (만원)</p>
+                  <p>지방비: <span className='sub_local'>{result.subsidy_local}</span> (만원)</p>
+                  <p>총합: <span className='sub_total'>{result.subsidy_total}</span> (만원)</p>
+                </div>
               </div>
             </div>
           ))

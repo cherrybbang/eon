@@ -28,6 +28,9 @@ a {
 .sub-page {
   padding: 0 100px;
 }
+.sub-page2 {
+  padding-bottom: 100px;
+}
 .sub-page, .sub-page2 {
   margin-top: 70px;
 }
